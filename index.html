@@ -45,6 +45,38 @@
 
         <style type="text/css">
           body {margin: 0; padding: 0; overflow: hidden;}
+
+          .map-switcher {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 99999;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(20, 20, 20, 0.78);
+            color: white;
+            text-decoration: none;
+            font-size: 28px;
+            line-height: 44px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+            transition: background 0.2s ease, transform 0.2s ease;
+          }
+
+          .map-switcher:hover {
+            background: rgba(20, 20, 20, 0.95);
+            transform: translateY(-50%) scale(1.08);
+          }
+
+          .map-switcher.left {
+            left: 18px;
+          }
+
+          .map-switcher.right {
+            right: 18px;
+          }
         </style>
 
         <!--MapBox token-->
@@ -83,6 +115,7 @@
         </script>
       </head>
       <body>
+        <a class="map-switcher right" href="map2.html" title="Vai alla seconda mappa">›</a>
         <!-- We will put our React component inside this div. -->
         <div id="app">
           <!-- Kepler.gl map will be placed here-->
